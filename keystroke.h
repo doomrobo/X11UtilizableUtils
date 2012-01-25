@@ -48,9 +48,6 @@ char keysymToChar(int keysym) {
 }
 
 static Bool check(Display *dpy, XEvent *event, XPointer x) {
-	Display *dpyannoy = dpy;
-	XEvent *eventannoy = event;
-	XPointer xannoy = x;
 	return True;
 }
 
