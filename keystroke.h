@@ -48,6 +48,9 @@ char keysymToChar(int keysym) {
 }
 
 static Bool check(Display *dpy, XEvent *event, XPointer x) {
+	Display *dpyannoy = dpy;
+	XEvent *eventannoy = event;
+	XPointer xannoy = x;
 	return True;
 }
 
@@ -60,7 +63,7 @@ static Bool check(Display *dpy, XEvent *event, XPointer x) {
  *           modifier key (0-7) if keysym is *
  *           a modifier                      *
  *********************************************/
-short is_modifier(int keysym) {
+short is_modifier(unsigned int keysym) {
 	XModifierKeymap *map = XGetModifierMapping(disp);
 	int max = map->max_keypermod; // Probably 5
 	short pos = 0;
