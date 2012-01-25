@@ -64,8 +64,9 @@ short is_modifier(int keysym) {
 	XModifierKeymap *map = XGetModifierMapping(disp);
 	int max = map->max_keypermod; // Probably 5
 	short pos = 0;
-	for (int i = 0; i < 8; i++) {
-		for (int j = 0; j < max; j++) {
+	int i, j;
+	for (i = 0; i < 8; i++) {
+		for (j = 0; j < max; j++) {
 			if (XKeycodeToKeysym(disp, map->modifiermap[(i*max) + j], 0) == keysym) {
 				pos = i;
 			}
