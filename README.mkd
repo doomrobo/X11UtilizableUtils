@@ -1,0 +1,10 @@
+#X11UtilizableUtils#
+####Very very alpha
+
+To use its current features, you must
+
+	#include <X11/Xlib.h>
+
+and link with libX11 like so:
+
+	gcc foo.c -lX11
