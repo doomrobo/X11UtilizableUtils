@@ -117,11 +117,6 @@ short reg_keystroke(int mods, int keysym) {
 short get_keystroke(int *state, int *keysym) {
 	XEvent event;
 
-	/*
-	 * TODO: Must "Debounce" keystrokes with timer using a millisecond
-	 * theshold for repetition.
-	 */
-
 	// Asynchronous call to get event
 	if (XCheckIfEvent(disp, &event, check, NULL) &&
 		event.xkey.type == KeyPress) {
